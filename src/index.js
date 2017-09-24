@@ -1,3 +1,4 @@
+import chromatic from 'react-chromatic';
 import registerServiceWorker from './registerServiceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,6 +12,12 @@ import App from './containers/App'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
+
+chromatic({
+  appCode: '4lxkqf3ntkg',
+  // This regexp stops us from including `.test.js` files
+  componentContext: require.context('./components', true, /\/[^\.]*\.js$/)
+});
 
 const loggerMiddleware = createLogger()
 
