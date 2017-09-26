@@ -1,3 +1,4 @@
+import './chromatic.js';
 import registerServiceWorker from './registerServiceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
